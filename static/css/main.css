@@ -1,0 +1,162 @@
+.first-color { 
+	background: #ececec; 
+}
+	
+.second-color { 
+	background: #9fd3c7; 
+}
+
+.third-color { 
+	background: #385170; 
+}
+
+.fourth-color { 
+	background: #142d4c; 
+}
+
+*{padding: 0; margin: 0; box-sizing: border-box;}
+body{
+    height: 900px;
+    font-size: 16px;
+    background-color: #ececec;
+}
+
+header {
+	background: url('./../imgs-web/header.jpg');
+    position: relative;
+    background-size: 300px;
+    text-align: center;
+	width: 100%;
+	height: auto;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	overflow: hidden;
+	border-radius: 0 0 90% 90% / 25%;
+}
+.overlay h1 {
+	font-family: 'Dancing Script', cursive;
+	font-size: 80px;
+	margin-bottom: 30px;
+}
+
+.overlay h2, .overlay h3 {
+	font-family: 'Open Sans', sans-serif;
+	margin-bottom: 30px;
+}
+
+.overlay button {
+	border: none;
+	outline: none;
+	padding: 10px 20px;
+	border-radius: 50px;
+	color: #333;
+	background: #fff;
+	margin-bottom: 50px;
+	box-shadow: 0 3px 20px 0 #0000003b;
+}
+.overlay button:hover{
+	cursor: pointer;
+}
+header .overlay{
+	width: 100%;
+	height: 100%;
+	padding: 50px;
+	color: #FFF;
+	text-shadow: 1px 1px 1px #333;
+    background-image: linear-gradient( 135deg, #9fd3c75b 20%, #38517083 100%);
+}
+
+.container-form-upload{
+    text-align: center; 
+    margin-top: 50px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.container-form-upload form{
+    display:flex;
+    flex-direction: column;
+}
+.container-form-upload form input[type="file"]{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+}
+
+.container-form-upload form input[type="submit"]{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 20px;
+    background-color: #385170;
+    color: #fff;
+    cursor: pointer;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.grid-wrapper > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.grid-wrapper > div > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+.grid-wrapper {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-auto-rows: 200px;
+	grid-auto-flow: dense;
+}
+.grid-wrapper .wide {
+	grid-column: span 2;
+}
+.grid-wrapper .tall {
+	grid-row: span 2;
+}
+.grid-wrapper .big {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+.mosaic_images{
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-bottom: 100px;
+}
+.mosaic_images h1{
+    padding-bottom: 10px;
+}
+#form_download{
+    margin-bottom: 20px;
+}
+#buttonDownload{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 20px;
+    background-color: #385170;
+    color: #fff;
+    cursor: pointer;
+}

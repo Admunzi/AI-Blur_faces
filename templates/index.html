@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/static/js/main.js"></script>
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+
+<header>
+	<div class="overlay">
+        <h1>Blurring App</h1>
+        <h2>Made by: Daniel Ayala Cantador</h2>
+        <h3>This application will recognize faces via amazon rekognition and will blur the faces.</h3>
+        <button id="button-github">My Github</button>
+    </div>
+</header>
+
+<body>
+    <div class="container-form-upload">
+        <h1>Form to upload more than one images</h1>
+        
+        <form action="/process" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*" multiple required>
+
+            <label>
+                Only blur minor: <input type="checkbox" name="minor_blur" value="yes">
+            </label>
+
+            <input type="submit" value="Upload">
+        </form>
+    </div>
+
+    <div class="mosaic_images">
+        {% if list_images %}
+
+        <h1>Blurred images</h1>
+        <form action="" id="form_download">
+            <input type="hidden" name="list_images" value="{{list_images}}">
+            <input type="submit" id="buttonDownload" value="Download images">
+        </form>
+
+        <div class="grid-wrapper">
+            {% for image in list_images %}
+            <div>
+                <img src="./static/uploads/{{ image }}" alt="Image blured" />
+            </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    </div>
+
+</body>
+</html>
