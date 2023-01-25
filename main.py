@@ -1,11 +1,3 @@
-"""
-This application will recognize faces via amazon rekognition and will blur the faces.
-The web app will be hosted on localhost:5000
-With a form to upload one or more images and return the images with the faces blurred.
-
-Author: Daniel Ayala Cantador
-
-"""
 import credentials
 import uuid
 from flask import Flask, request, render_template
