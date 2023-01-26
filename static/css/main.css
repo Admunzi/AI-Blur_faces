@@ -58,6 +58,16 @@ header {
 .overlay button:hover{
 	cursor: pointer;
 }
+
+#button-github {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
+
 header .overlay{
 	width: 100%;
 	height: 100%;
@@ -159,4 +169,77 @@ img {
     background-color: #385170;
     color: #fff;
     cursor: pointer;
+}
+
+
+.container_github{
+display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container_github a{
+position: relative;
+  width: 160px;
+  height: 60px;
+  display: inline-block;
+  background: #fff;
+  margin: 20px;
+}
+.container_github a:before,
+.container_github a:after
+{
+content:'';
+  position: absolute;
+  inset: 0;
+  transition: 0.5s;
+  background: #f00
+}
+.container_github a:nth-child(1):before,
+.container_github a:nth-child(1):after
+{
+ background: linear-gradient(45deg, #00ccff, #0e1538, #d400d4)
+}
+.container_github a:nth-child(2):before,
+.container_github a:nth-child(2):after
+{
+  background: linear-gradient(45deg, #f0075b, #0e1538, #1aff22);
+}
+.container_github a:hover:before
+{
+  inset: -3px;
+}
+.container_github a:hover:after
+{
+  inset: -3px;
+  filter: blur(10px);
+}
+.container_github a span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background: #142d4c;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  border: 1px solid #040a29;
+  overflow: hidden;
+}
+.container_github a span::before{
+content:'';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.075);
+    transform: skew(25deg)
 }

@@ -13,13 +13,18 @@
         <h1>Blurring App</h1>
         <h2>Made by: Daniel Ayala Cantador</h2>
         <h3>This application will recognize faces via amazon rekognition and will blur the faces.</h3>
-        <button id="button-github">My Github</button>
+        <div class="container_github">
+            <a href="https://github.com/Admunzi">
+                <span>My Github</span>
+            </a>
+        </div>
+
     </div>
 </header>
 
 <body>
     <div class="container-form-upload">
-        <h1>Form to upload more than one images</h1>
+        <h1>Form to upload one or more images</h1>
         
         <form action="/process" method="post" enctype="multipart/form-data">
             <input type="file" name="image" accept="image/*" multiple required>
