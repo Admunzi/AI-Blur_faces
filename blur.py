@@ -2,7 +2,7 @@ from PIL import Image, ImageFilter
 import credentials
 
 
-def blur_faces(filename, faces_detected, minor_blur):
+def blur_faces(filename, faces_detected):
     image = Image.open(credentials.PATH_UPLOADS_FILES + filename)
 
     for face in faces_detected['FaceDetails']:
